@@ -183,6 +183,18 @@ spring:
 
 ---
 
+## ⚙️ Application Settings
+
+| Application              | app-id        | dev-url : port | test-url : port | prod-url : port |
+|--------------------------|---------------|----------------|-----------------|-----------------|
+| **Configuration Server** | config-server | :9001          | :9001           | :9001           |
+
+
+URLs and Ports
+
+✅ config-server : 9001  
+
+
 ## 🧠 Best Practices
 
 - ✅ Keep all sensitive credentials in Vault or external secret stores  

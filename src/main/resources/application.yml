@@ -1,0 +1,17 @@
+server:
+  port: 9001
+  error:
+    whitelabel:
+      enabled: false
+    path: /error
+
+spring:
+  profiles:
+    active: native
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/configurations
