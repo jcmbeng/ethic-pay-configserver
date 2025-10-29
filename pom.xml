@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.ethicpay</groupId>
-	<artifactId>configserver</artifactId>
+	<artifactId>config-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>configserver</name>
 	<description>ETHIC Pay Cloud Configuration Server</description>
