@@ -188,6 +188,7 @@ spring:
 | Application              | app-id        | dev-url : port | test-url : port | prod-url : port |
 |--------------------------|---------------|----------------|-----------------|-----------------|
 | **Configuration Server** | config-server | :9001          | :9001           | :9001           |
+| **API GateWay**          | api-gateway   | :8080          | :443            | :443            |
 
 
 URLs and Ports

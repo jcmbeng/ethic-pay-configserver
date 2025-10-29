@@ -1,0 +1,48 @@
+server:
+  port: 443
+  ssl:
+    enabled: true
+    key-alias: local_ssl
+    key-store: classpath:local-ssl.p12
+    key-store-type: PKCS12
+    key-password: qW_c!;zne"tvD1qGi?K]m("!4)Vbts>Q
+    key-store-password: ${server.ssl.key-password}
+
+spring:
+#  application:
+#    name: api-gateway
+      #security:
+    # oauth2:
+    #  resourceserver:
+    #   jwt:
+    #    issuer-uri: http://localhost:9090/realms/ethicpay-realm
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          lower-case-service-id: true
+      routes[0]:
+        id: user-service
+        uri: lb://user-service
+        predicates[0]: Path=/api/v1/users/**
+      routes[1]:
+        id: cotisation-service
+        uri: lb://cotisation-service
+        predicates[0]: Path=/api/v1/cotisations/**
+      routes[2]:
+        id: activity-manager
+        uri: lb://activity-manager
+        predicates[0]: Path=/api/v1/activity-manager/**
+
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:9902/eureka/
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
