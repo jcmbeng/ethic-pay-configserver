@@ -185,10 +185,12 @@ spring:
 
 ## ⚙️ Application Settings
 
-| Application              | app-id        | dev-url : port | test-url : port | prod-url : port |
-|--------------------------|---------------|----------------|-----------------|-----------------|
-| **Configuration Server** | config-server | :9001          | :9001           | :9001           |
-| **API GateWay**          | api-gateway   | :8080          | :443            | :443            |
+| Application              | app-id             | dev-url : port        | test-url : port              | prod-url : port           |
+|--------------------------|--------------------|-----------------------|------------------------------|---------------------------|
+| **Configuration Server** | config-server      | :9001                 | :9001                        | :9001                     |
+| **API GateWay**          | api-gateway        | :8080                 | :443                         | :443                      |
+| **KEYCLOAK Server**      | keycloak-server    | http://localhost:9090 | https://ethic-media.com:9090 | https://ethic-pay.com:443 |
+| **KEYCLOAK Server DB**   | keycloak-server-db | http://localhost:9090 | https://ethic-media.com:9090 | https://ethic-pay.com:443 |
 
 
 URLs and Ports
